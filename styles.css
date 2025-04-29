@@ -73,6 +73,7 @@ header {
     overflow: hidden;
 }
 
+
 header::after {
     content: "";
     position: absolute;
@@ -426,6 +427,18 @@ form button:hover {
 }
 
 /* ====================
+   MAPA
+==================== */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* ====================
    FOOTER
 ==================== */
 footer {
@@ -484,4 +497,36 @@ footer {
     .flecha {
         font-size: 1.2rem;
     }
+}
+
+/* ====================
+   MEDIA QUERY HEADER
+==================== */
+@media (max-width: 768px) {
+    header {
+        min-height: 100vh;
+        /* Mantiene la altura mínima en móviles */
+    }
+}
+
+/* ANIMACIONES AL SCROLL */
+.fade-up,
+.fade-left,
+.fade-right {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.fade-left {
+    transform: translateX(-20px);
+}
+
+.fade-right {
+    transform: translateX(20px);
+}
+
+.reveal {
+    opacity: 1 !important;
+    transform: translateX(0) translateY(0) scale(1) !important;
 }

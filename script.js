@@ -1,20 +1,30 @@
-// ANIMACIÓN DE SCROLL (Scroll Reveal personalizado)
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('reveal');
-        }
-    });
-}, { threshold: 0.2 });
+// ANIMACIÓN DE SCROLL (Scroll Reveal)
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+            }
+        });
+    }, { threshold: 0.2 });
 
-document.querySelectorAll('.section').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => observer.observe(el));
+});
 
-
-// Confirmación del formulario (simulada)
-document.querySelector("form").addEventListener("submit", function (e) {
+// ENVÍO A WHATSAPP
+document.getElementById("form-confirmacion").addEventListener("submit", function (e) {
     e.preventDefault();
-    document.getElementById("mensaje-confirmacion").style.display = "block";
-    this.reset();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const asistencia = document.getElementById("asistencia").value;
+
+    if (!nombre || !asistencia) return;
+
+    const mensaje = `Hola! Soy ${nombre} y ${asistencia === 'si' ? 'asistiré' : 'no podré asistir'} a la fiesta 🎉`;
+    const telefono = "5492634478995"; // Tu número de WhatsApp
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
 });
 
 // Cuenta regresiva
@@ -40,10 +50,9 @@ function actualizarContador() {
     minutosSpan.textContent = minutos.toString().padStart(2, "0");
     segundosSpan.textContent = segundos.toString().padStart(2, "0");
 }
-
 setInterval(actualizarContador, 1000);
 
-// ACTIVACIÓN MÚSICA
+// Música
 const musica = document.getElementById('musica-fondo');
 const btnAudio = document.getElementById('btn-audio');
 const icono = btnAudio.querySelector('i');
@@ -73,20 +82,17 @@ document.addEventListener('click', () => {
     }
 }, { once: true });
 
-// Copiar texto
+// Copiar alias
 function copiarTexto(boton, id) {
     const texto = document.getElementById(id).textContent;
     navigator.clipboard.writeText(texto).then(() => {
         const mensaje = boton.nextElementSibling;
-        mensaje.classList.add("mostrar-copiado"); // Mostrar el mensaje de copiado
-        setTimeout(() => {
-            mensaje.classList.remove("mostrar-copiado"); // Ocultar el mensaje después de 2 segundos
-        }, 2000);
-    }).catch(err => {
-        console.error('Error al copiar el texto: ', err); // Manejo de errores
-    });
+        mensaje.classList.add("mostrar-copiado");
+        setTimeout(() => mensaje.classList.remove("mostrar-copiado"), 2000);
+    }).catch(err => console.error('Error al copiar el texto: ', err));
 }
-// Carrusel de imágenes
+
+// Carrusel
 document.addEventListener("DOMContentLoaded", () => {
     const imagenes = document.querySelectorAll(".carrusel img");
     let indiceActual = 0;
