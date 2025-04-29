@@ -159,7 +159,6 @@ h2 {
     font-size: 2.8em;
     color: #363f30;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     text-align: center;
 }
 
@@ -176,7 +175,6 @@ h2 {
     text-align: center;
     color: #363f30;
     padding: 40px 20px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* ====================
@@ -357,7 +355,6 @@ form button:hover {
     font-size: 2.8em;
     color: #363f30;
     margin-bottom: 40px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     text-align: center;
 }
 
@@ -461,7 +458,7 @@ footer {
 }
 
 .boton-audio:hover {
-    background-color: #99652e;
+    background-color: #443a31;
 }
 
 /* ====================
