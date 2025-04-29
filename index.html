@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis 15 - Valentina</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header fade-up">
+        <div class="banner">
+            <span class="nombres-evento">Valentina</span>
+            <h1>Mis 15 Años</h1>
+        </div>
+        <img src="./Imagen25.jpeg" alt="Banner" class="background-banner" />
+        <div id="cuenta-regresiva" class="contador">
+            <div><span id="dias">00</span>
+                <p>Días</p>
+            </div>
+            <div><span id="horas">00</span>
+                <p>Horas</p>
+            </div>
+            <div><span id="minutos">00</span>
+                <p>Min</p>
+            </div>
+            <div><span id="segundos">00</span>
+                <p>Seg</p>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+    <section id="frase" class="section section-frase fade-left">
+        <blockquote class="frase-evento">
+            "Los sueños están hechos de magia... y los 15 de ilusiones."
+        </blockquote>
+    </section>
+
+    <section id="galeria" class="seccion">
+        <div class="contenedor-galeria">
+            <h2>Un vistazo a mi mundo</h2>
+            <div class="carrusel">
+                <button class="flecha izquierda" onclick="moverCarrusel(-1)">&#10094;</button>
+                <img src="./Imagen25.jpeg" alt="Foto 1" class="foto activa">
+                <img src="./Imagen5.jpeg" alt="Foto 2" class="foto">
+                <img src="./Imagen23.jpeg" alt="Foto 3" class="foto">
+                <button class="flecha derecha" onclick="moverCarrusel(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="evento" class="section section-evento fade-up">
+        <h2>Detalles del Evento</h2>
+        <div class="evento-cards">
+            <div class="evento-card fade-right">
+                <div class="evento-icon"><i class="fa-solid fa-star"></i></div>
+                <div class="evento-info">
+                    <h3>Recepción</h3>
+                    <p><strong>Hora:</strong> 20:00 hs</p>
+                    <p><strong>Lugar:</strong> Salón Brisas del Sol</p>
+                </div>
+            </div>
+            <div class="evento-card fade-right">
+                <div class="evento-icon"><i class="fa-solid fa-music"></i></div>
+                <div class="evento-info">
+                    <h3>Vals & Fiesta</h3>
+                    <p>No te lo podés perder 💃✨</p>
+                </div>
+            </div>
+            <div class="evento-card fade-right">
+                <div class="evento-icon"><i class="fa-solid fa-gem"></i></div>
+                <div class="evento-info">
+                    <h3>Dress Code</h3>
+                    <p>Elegante</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="confirmacion" class="section fade-up">
+        <h2>Confirmar Asistencia</h2>
+        <div class="form-card">
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+                <label for="asistencia">¿Asistirás?</label>
+                <select id="asistencia" name="asistencia" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <button type="submit">Confirmar</button>
+            </form>
+            <p id="mensaje-confirmacion" class="mensaje-exito" style="display: none;">¡Gracias por confirmar tu
+                asistencia! 💌</p>
+        </div>
+    </section>
+
+    <section id="regalos" class="section fade-up">
+        <h2>Ideas de Regalo</h2>
+        <div class="regalos-container">
+            <div class="regalo-card">
+                <div class="icono-regalo"><i class="fas fa-gift"></i></div>
+                <div class="texto-regalo">
+                    <p>Alias: <span id="alias">valentina.15fiesta</span></p>
+                    <button onclick="copiarTexto(this, 'alias')">Copiar Alias</button>
+                    <span class="copiado-msg" style="display: none;">¡Copiado!</span>
+                </div>
+            </div>
+            <div class="regalo-card">
+                <div class="icono-regalo"><i class="fas fa-heart"></i></div>
+                <div class="texto-regalo">
+                    <p>Tu presencia será el mejor regalo ❤️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mapa" class="section fade-up">
+        <h2>¿Dónde es?</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <p>Creado con 💖 por <a href="https://wa.me/5492634478995" target="_blank">InvitWeb</a></p>
+    </footer>
+
+    <audio id="musica-fondo" loop>
+        <source src="./Bruno Mars - Marry You (LyricsVietsub).mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <button id="btn-audio" class="boton-audio">
+        <i class="fa-solid fa-pause"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
