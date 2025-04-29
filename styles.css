@@ -166,6 +166,10 @@ h2 {
 /* ====================
    FRASE DESTACADA
 ==================== */
+#frase {
+    background-color: #fdecda;
+}
+
 .frase-evento {
     font-family: 'Great Vibes', cursive;
     font-style: italic;
@@ -187,7 +191,7 @@ h2 {
     /* Asegura que ocupe el 100% del ancho */
     padding: 40px 0;
     /* Ajusta el padding para evitar márgenes laterales */
-    background-color: var(--color-fondo);
+    background-color: #fff6ed;
     /* Usar el mismo color de fondo */
     box-sizing: border-box;
     /* Incluye el padding dentro del ancho total */
@@ -254,6 +258,10 @@ h2 {
 /* ====================
    FORMULARIO DE CONFIRMACIÓN
 ==================== */
+#confirmacion {
+    background-color: #fff6ed;
+}
+
 .form-card {
     border-radius: 18px;
     padding: 30px 25px;
@@ -312,6 +320,10 @@ form button:hover {
 /* ====================
    DETALLES DEL EVENTO
 ==================== */
+#evento {
+    background-color: #fdecda;
+}
+
 .evento-cards {
     display: flex;
     flex-wrap: wrap;
@@ -362,6 +374,10 @@ form button:hover {
 /* ====================
    RECOMENDACIONES DE REGALOS
 ==================== */
+#regalos {
+    background-color: #fdecda;
+}
+
 .regalos-container {
     display: flex;
     flex-wrap: wrap;
@@ -429,6 +445,10 @@ form button:hover {
 /* ====================
    MAPA
 ==================== */
+#mapa {
+    background-color: #fff6ed;
+}
+
 iframe {
     width: 100%;
     max-width: 600px;
