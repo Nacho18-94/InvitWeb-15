@@ -256,6 +256,119 @@ h2 {
 }
 
 /* ====================
+   DETALLES DEL EVENTO
+==================== */
+#evento {
+    background-color: #fdecda;
+}
+
+.evento-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.evento-card {
+    color: #7a5c3c;
+    padding: 25px 20px;
+    width: 300px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.evento-icon {
+    font-size: 3rem;
+    color: #363f30;
+    margin-bottom: 15px;
+}
+
+.evento-info h3 {
+    font-size: 1.3rem;
+    color: #363f30;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.evento-info p {
+    font-size: 0.8rem;
+    color: #363f30;
+    line-height: 1.5;
+}
+
+#evento h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8em;
+    color: #363f30;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*BOTÓN SPOTIFY*/
+.playlist-container {
+    display: flex;
+    /* Activar flexbox */
+    flex-direction: column;
+    /* Cambiar a columna para apilar elementos */
+    justify-content: center;
+    /* Centrar verticalmente */
+    align-items: center;
+    /* Centrar horizontalmente */
+    text-align: center;
+    background-color: #fdecda;
+    /* Mantener el fondo de la sección */
+    padding: 40px 0;
+    /* Espacio arriba y abajo */
+}
+
+.card {
+    background: none;
+    /* Eliminar color de fondo de la tarjeta */
+    border: none;
+    /* Eliminar borde de la tarjeta */
+    box-shadow: none;
+    /* Eliminar sombra de la tarjeta */
+    padding-bottom: 15px;
+    /* Eliminar padding de la tarjeta */
+    width: auto;
+    /* Ajustar el ancho de la tarjeta */
+    margin: 0;
+    /* Eliminar margen para que quede suelta */
+}
+
+
+.spotify-button {
+    background-color: #1DB954;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.spotify-button:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+
+.spotify-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* ====================
    FORMULARIO DE CONFIRMACIÓN
 ==================== */
 #confirmacion {
@@ -317,59 +430,6 @@ form button:hover {
     box-shadow: 0 3px 10px #7a5c3c;
 }
 
-/* ====================
-   DETALLES DEL EVENTO
-==================== */
-#evento {
-    background-color: #fdecda;
-}
-
-.evento-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.evento-card {
-    color: #7a5c3c;
-    padding: 25px 20px;
-    width: 300px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.evento-icon {
-    font-size: 3rem;
-    color: #363f30;
-    margin-bottom: 15px;
-}
-
-.evento-info h3 {
-    font-size: 1.3rem;
-    color: #363f30;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.evento-info p {
-    font-size: 0.8rem;
-    color: #363f30;
-    line-height: 1.5;
-}
-
-#evento h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.8em;
-    color: #363f30;
-    margin-bottom: 40px;
-    text-align: center;
-}
 
 /* ====================
    RECOMENDACIONES DE REGALOS
